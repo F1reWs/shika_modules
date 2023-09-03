@@ -28,7 +28,7 @@ class TagAllMod(loader.Module):
     def __init__(self):
         self.config = Config(
             ConfigValue(
-                option='cho',
+                option='check',
                 description='Будет ли проверка модулей на вредоносный модуль',
                 default=True,
                 value=True,
