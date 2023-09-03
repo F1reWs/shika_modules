@@ -18,11 +18,22 @@ import random
 
 from pyrogram import Client, types
 from .. import loader, utils
+from ..types import Config, ConfigValue
 
 
 @loader.module("TagAll", "sh1tn3t")
 class TagAllMod(loader.Module):
     """Тегает всех в чате"""
+
+    def __init__(self):
+        self.config = Config(
+            ConfigValue(
+                option='cho',
+                description='Будет ли проверка модулей на вредоносный модуль',
+                default=True,
+                value=True,
+            )
+        )
 
     async def tagall_cmd(self, app: Client, message: types.Message, args: str):
         """Начинает всех тегать. Использование: tagall [текст]"""
