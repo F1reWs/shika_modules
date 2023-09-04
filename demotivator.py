@@ -2,7 +2,7 @@
 #  █▀ █ █▐█▀ █▀▀ █░█░█     █░█░█ █░█ █░█ ░▀▄ 
 #  ▀░ ▀ ▀░▀▀ ▀▀▀ ░▀░▀░     ▀░░░▀ ░▀░ ▀▀░ ▀▀░ 
 #             © F1reW 2023
-#          https://t.me/firewmods
+#        https://t.me/firewmods
 
 from .. import loader
 import asyncio
