@@ -18,7 +18,7 @@ class DemotivatorMod(loader.Module):
         if message.reply_to_message.photo:
             await app.unblock_user(username_dem)
             try:
-               capt = message.text.split(" ")[1:]
+               capt = ' '.join(message.text.split(" ")[1:])
             except:
                 prefix = self.db.get("shika.loader", "prefixes", ["."])[0]
                 return await message.edit(f"<b><emoji id=5440381017384822513>❌</emoji> Должно быть <code>{prefix}demotivator текст_который_будет_снизу</code></b>")
