@@ -17,7 +17,7 @@ class QRcodeMod(loader.Module):
         await message.edit("<b><emoji id=5325731315004218660>🔄</emoji> Создание QRcode...</b>")
         app.me = await app.get_me()
         try:
-            txt = message.text.split(" ")[1]
+            txt = message.text.split(" ")[1:]
         except:
             prefix = self.db.get("shika.loader", "prefixes", ["."])[0]
             return await message.edit(f"<b><emoji id=5440381017384822513>❌</emoji> Должно быть <code>{prefix}qrcode [text]</code></b>")
