@@ -21,6 +21,9 @@ class QRcodeMod(loader.Module):
         except:
             prefix = self.db.get("shika.loader", "prefixes", ["."])[0]
             return await message.edit(f"<b><emoji id=5440381017384822513>❌</emoji> Должно быть <code>{prefix}qrcode [text]</code></b>")
+        if not txt:
+            prefix = self.db.get("shika.loader", "prefixes", ["."])[0]
+            return await message.edit(f"<b><emoji id=5440381017384822513>❌</emoji> Должно быть <code>{prefix}qrcode [text]</code></b>")
 
         img = qrcode.make(txt)
         img.save('assets/code.png')
