@@ -22,6 +22,9 @@ class DemotivatorMod(loader.Module):
             except:
                 prefix = self.db.get("shika.loader", "prefixes", ["."])[0]
                 return await message.edit(f"<b><emoji id=5440381017384822513>❌</emoji> Должно быть <code>{prefix}demotivator текст_который_будет_снизу</code></b>")
+            if not capt:
+                prefix = self.db.get("shika.loader", "prefixes", ["."])[0]
+                return await message.edit(f"<b><emoji id=5440381017384822513>❌</emoji> Должно быть <code>{prefix}demotivator текст_который_будет_снизу</code></b>")
             await app.send_message(chat_id=username_dem, text="/start")
             await asyncio.sleep(1)
             await app.send_photo(
