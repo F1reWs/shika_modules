@@ -7,7 +7,7 @@
 from .. import loader, utils
 
 @loader.module("Webshot", "@firewmods")
-class StatsMod(loader.Module):
+class WebshotMod(loader.Module):
     """Делает вебшот"""
 
     async def webshot_cmd(self, app, message):
